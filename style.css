@@ -1,38 +1,71 @@
+/* Центрирование всей страницы */
 body {
     background-color: bisque;
     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
+/* Контейнер для карточек */
+.cards-container {
+    display: flex;
+    gap: 20px; /* Отступы между карточками */
+    flex-wrap: wrap; /* Чтобы карточки переносились, если экран маленький */
+    justify-content: center; /* Центрирование карточек */
+}
+
+/* Стиль карточки */
 .card {
-    width: 450px;
-    height: 900px;
+    width: 350px; /* Сделал чуть меньше для красивого расположения */
     background-color: burlywood;
-    border-radius: 60px;
-}
-
-.photo {
-    width: 400px;
-    padding: 20px;
-}
-
-.info {
-    width: 400px;
-    padding: 20px;
-    position: relative;
-    left: 40px;
-}
-img {
-    position: relative;
-    left: 7px;
-    width: 400px;
-    height: 600px;
     border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-img:hover {
+/* Анимация при наведении */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Блок с фото */
+.photo {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Увеличение фото при наведении */
+.photo img:hover {
     transform: scale(1.1);
 }
 
-.info:hover {
-    transform: scale(1.1);
+/* Информация */
+.info {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Ссылки */
+.info a {
+    color: navy;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info a:hover {
+    text-decoration: underline;
 }
