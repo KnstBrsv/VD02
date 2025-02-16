@@ -1,0 +1,38 @@
+body {
+    background-color: bisque;
+    color: black;
+}
+
+.card {
+    width: 450px;
+    height: 900px;
+    background-color: burlywood;
+    border-radius: 60px;
+}
+
+.photo {
+    width: 400px;
+    padding: 20px;
+}
+
+.info {
+    width: 400px;
+    padding: 20px;
+    position: relative;
+    left: 40px;
+}
+img {
+    position: relative;
+    left: 7px;
+    width: 400px;
+    height: 600px;
+    border-radius: 20px;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+.info:hover {
+    transform: scale(1.1);
+}
